@@ -4,7 +4,7 @@ import Home from './components/Home/Home';
 import Contact from './components/Contact/Contact';
 import Projects from './components/Projects/Projects';
 import Layout from './Layout';
-
+import ColorChanger from './ColorChanger';
 function App() {
   // console.log("Hello")
   return (
@@ -18,6 +18,7 @@ function App() {
         </Route>
       </Routes>
     </Router>
+  
   );
 }
 

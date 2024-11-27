@@ -1,29 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 
 function Layout() {
+  const [isMobMenu, setIsMobMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMobMenu(!isMobMenu);
+  };
+
+
+
   return (
     <div>
-      <nav className='bg-purple-300 flex h-10 justify-around text-black fixed w-full'>
-      <div className='flex justify-center self-center '>
-  
-
-
-
-        <Link to="/" className=' hover:bg-purple-600 rounded-md p-2 '>Home</Link>
-        <Link to="/contact" className=' hover:bg-purple-600 rounded-md p-2 '>Contact</Link>
-        <Link to="/projects" className=' hover:bg-purple-600 rounded-md p-2 '>Projects</Link>
+      <div className=' bg-[#6948F8] flex'>
+        <div className=' sm:w-1/3 bg-[#6948F8] h-12 text-white'></div>
+        <div className=' sm:w-2/3 relative bg-white'>
+          <nav className='justify-  sm:flex h-10 justify-around text-black fixed w-2/3 top-0 left-1/3 m-2 z-50 '>
+            <div className='hidden sm:flex justify-center self-center font-sans'>
+              <Link to="/" className='hover:bg-purple-600 rounded-md p-2'>Home</Link>
+              <Link to="/projects" className='hover:bg-purple-600 rounded-md p-2'>Projects</Link>
+              <Link to="/about" className='hover:bg-purple-600 rounded-md p-2'>About Me</Link>
+              <Link to="/contact" className='bg-[#6948F8] rounded-sm p-2 text-white hover:bg-orange-500'>Contact Me</Link>
+            </div>
+            <button className='sm:hidden absolute right-5    ' onClick={toggleMenu}>
+              ☰
+            </button>
+          </nav>
         </div>
-        <div className=' self-center'>
-          <input type="text" placeholder="Search.." name="search" className='rounded-md'/>
-         
       </div>
-      </nav>
-      
+      {/* Mobile menu */}
+      {isMobMenu ? (
+        <div className='flex flex-col items-center bg-[#6948F8] w-full fixed top-10 left-0 z-50 sm:hidden'>
+          <Link to="/" className=' hover:bg-orange-500 rounded-md p-2 text-white' onClick={toggleMenu}>Home</Link>
+          <Link to="/projects" className=' hover:bg-orange-500 rounded-md p-2 text-white' onClick={toggleMenu}>Projects</Link>
+          <Link to="/about" className=' hover:bg-orange-500 rounded-md p-2 text-white' onClick={toggleMenu}>About Me</Link>
+          <Link to="/contact" className='bg-red-500 rounded-sm p-2 mb-2 mt-2 text-white hover:bg-orange-500 ' onClick={toggleMenu}>Contact Me</Link>
+        </div>
+      ) : null}
+      <div style={{ marginTop: isMobMenu ? '150px' : '0' }}></div>
       <Outlet />
       <Footer />
-      
     </div>
   );
 }

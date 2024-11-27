@@ -1,20 +1,44 @@
 import React from 'react';
+import subesh from './subesh.jpg';
+import insta from './insta.png';
+import github from './github.png';
+import linkedin from './linkedin.png';
+import twitter from './twitter.png';
 
 function Home() {
     return (
-        <div className="bg-gray-100 min-h-screen flex items-center justify-center">
-            <div className="max-w-4xl px-8 py-12 bg-white shadow-lg rounded-lg">
-                <h1 className="text-3xl font-bold text-gray-800 mb-8">Welcome to My Portfolio</h1>
-                <p className="text-gray-700 mb-6">
-                    Hi there! I'm showcasing my skills and projects here. Feel free to explore and get in touch!
-                </p>
-                <img src='https://img.freepik.com/premium-photo/portrait-man-with-blue-lights-visual-effects-ultra-hd-realistic-generative-ai_947227-933.jpg' alt='Profile' width={200}/>
-
-                <div className="flex justify-center">
-                    <a href="#projects" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
-                        View Projects
-                    </a>
+        <div className='flex flex-wrap sm:flex-row min-h-screen relative'>
+            <div className='hidden sm:flex justify-center items-center  sm:bg-[#6948F8] sm:w-1/3 relative '>
+                <div className='w-[200px] h-[200px] bg-[#6948F8] rounded-full absolute right-[-25%] flex items-center justify-center'>
+                    <div className='bg-white w-[180px] h-[180px] rounded-full flex justify-center items-center'>
+                        <img src={subesh} alt="Example" className='  rounded-full w-[150px] h-[150px]' />
+                    </div> 
                 </div>
+                
+                
+                
+            </div>
+            <div className='flex justify-center w-full h-10 mt-5 sm:hidden' >
+                <div className='w-[180px] h-[180px] bg-[#6948F8] rounded-full absolute  flex  justify-center sm:hidden'>
+                    <div className='bg-[#6948F8] w-[180px] h-[180px] rounded-full flex justify-center items-center'>
+                        <img src={subesh} alt="Example" className='  rounded-full w-[150px] h-[150px]' />
+                    </div> 
+                </div>
+            </div>
+            
+
+            <div className='flex justify-center  w-full  sm:w-2/3 font-serif sm:items-center'>
+                <div>
+                    <p className='text-2xl md:text-4xl'>Subesh Yadav</p>                
+                    <p className='text-1xl md:text-2xl'>I am Into Web Development !!!</p>      
+                    <button className='rounded-md bg-[#6948F8] p-2 text-white hover:bg-orange-500 mt-3'>Download CV</button>
+                </div>         
+                <div className='mt-0 sm:h-7 w-7 ml-5 sm:mt-[-70px]'>   
+                    <a href="https://www.instagram.com/subeshyadav3/"><img src={insta} alt="Instagram"/></a>
+                    <a href="https://www.linkedin.com/in/subeshyadav3/"><img src={linkedin} alt="LinkedIn"/></a>
+                    <a href="https://x.com/subeshyadav3"><img src={twitter} alt="Twitter"/></a>
+                    <a href="https://github.com/subeshyadav3"><img src={github} alt="GitHub"/></a>
+                </div>         
             </div>
         </div>
     );
