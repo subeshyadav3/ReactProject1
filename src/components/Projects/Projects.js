@@ -26,6 +26,14 @@ function Projects() {
             demoUrl: '#',
             codeUrl: '#',
         },
+        {
+            id: 3,
+            title: 'Task Manager',
+            description: 'An application to manage tasks and to-do lists.',
+            imageUrl: 'https://via.placeholder.com/300',
+            demoUrl: '#',
+            codeUrl: '#',
+        },
     ];
 
     return (

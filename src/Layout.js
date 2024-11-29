@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
-
+import Home from './components/Home/Home';
 function Layout() {
   const [isMobMenu, setIsMobMenu] = useState(false);
 
@@ -16,7 +16,7 @@ function Layout() {
       <div className=' bg-[#6948F8] flex'>
         <div className=' sm:w-1/3 bg-[#6948F8] h-12 text-white'></div>
         <div className=' sm:w-2/3 relative bg-white'>
-          <nav className='justify-  sm:flex h-10 justify-around text-black fixed w-2/3 top-0 left-1/3 m-2 z-50 '>
+          <nav className='justify-  sm:flex h-10 justify-around text-black fixed  top-0 right-0 pr-20 m-2 z-50 '>
             <div className='hidden sm:flex justify-center self-center font-sans'>
               <Link to="/" className='hover:bg-purple-600 rounded-md p-2'>Home</Link>
               <Link to="/projects" className='hover:bg-purple-600 rounded-md p-2'>Projects</Link>
@@ -27,10 +27,12 @@ function Layout() {
               ☰
             </button>
           </nav>
-        </div>
+          </div>
+      
       </div>
       {/* Mobile menu */}
       {isMobMenu ? (
+        
         <div className='flex flex-col items-center bg-[#6948F8] w-full fixed top-10 left-0 z-50 sm:hidden'>
           <Link to="/" className=' hover:bg-orange-500 rounded-md p-2 text-white' onClick={toggleMenu}>Home</Link>
           <Link to="/projects" className=' hover:bg-orange-500 rounded-md p-2 text-white' onClick={toggleMenu}>Projects</Link>
@@ -39,8 +41,12 @@ function Layout() {
         </div>
       ) : null}
       <div style={{ marginTop: isMobMenu ? '150px' : '0' }}></div>
+
+      
       <Outlet />
+      
       <Footer />
+     
     </div>
   );
 }
