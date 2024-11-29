@@ -3,18 +3,11 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <footer className="bg-gray-900 text-white text-center p-4   w-full flex justify-center gap-10">
-            
-            <div className='flex justify-center flex-col '>
-            <Link to='/projects' className=" hover:text-orange-600">Projects</Link>
-            <Link to='/contact' className=" hover:text-orange-600">Contact</Link>
-                
-            </div>
-            <div className='flex justify-center flex-col '>
-            <Link to='/projects' className=" hover:text-orange-600">Projects</Link>
-            <Link to='/contact' className=" hover:text-orange-600">Contact</Link>
-            </div>
-        </footer>
+        // {/* Footer */}
+        <footer className="bg-gray-800 text-white text-center py-6" id="contact">
+        <p>&copy; 2024 . All rights reserved.</p>
+        <p>Contact us at <a href="mailto:abc@gmail.com" className="text-orange-500">abc@gmail.com</a></p>
+    </footer>
     ); 
 }
 
