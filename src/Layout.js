@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
-import Home from './components/Home/Home';
+
 function Layout() {
   const [isMobMenu, setIsMobMenu] = useState(false);
 

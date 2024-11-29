@@ -9,7 +9,7 @@ function About() {
                 <p className="text-lg sm:text-xl px-4 sm:px-16 mb-8">
                     We are a team of passionate individuals dedicated to delivering innovative solutions
                     to help businesses grow and thrive in the digital age. Our mission is to provide high-quality
-                    services and creyate lasting relationships with our clients.
+                    services and create lasting relationships with our clients.
                 </p>
 
                 {/* Mission Section */}
@@ -24,19 +24,14 @@ function About() {
                 {/* Team Section */}
                 <div className="flex flex-wrap justify-center gap-8">
                     <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-80">
-                        <img src="https://via.placeholder.com/150" alt="Team Member" className="rounded-full mb-4 mx-auto" />
-                        <h4 className="text-xl font-semibold mb-2">John Doe</h4>
-                        <p className="text-lg">CEO & Founder</p>
+                        <img src="photo.jpg" alt="Team Member" className="rounded-full mb-4 mx-auto" />
+                        <h4 className="text-xl font-semibold mb-2">Subesh Yadav</h4>
+                        <p className="text-lg">Team Member</p>
                     </div>
                     <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-80">
-                        <img src="https://via.placeholder.com/150" alt="Team Member" className="rounded-full mb-4 mx-auto" />
-                        <h4 className="text-xl font-semibold mb-2">Jane Smith</h4>
-                        <p className="text-lg">Chief Technology Officer</p>
-                    </div>
-                    <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-80">
-                        <img src="https://via.placeholder.com/150" alt="Team Member" className="rounded-full mb-4 mx-auto" />
-                        <h4 className="text-xl font-semibold mb-2">Alice Johnson</h4>
-                        <p className="text-lg">Head of Marketing</p>
+                        <img src="photo.jpg" alt="Team Member" className="rounded-full mb-4 mx-auto" />
+                        <h4 className="text-xl font-semibold mb-2">Papu Chaudhary</h4>
+                        <p className="text-lg">Team Member</p>
                     </div>
                 </div>
             </section>
