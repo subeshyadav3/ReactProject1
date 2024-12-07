@@ -13,10 +13,10 @@ function Layout() {
 
   return (
     <div>
-      <div className=' flex bg-blue-500'>
+      <div className=' flex bg-blue-500 '>
         {/* <div className=' sm:w-1/3 bg-[#6948F8] h-12 text-white'></div> */}
         <div className='  relative '>
-          <nav className='justify-  sm:flex h-10 justify-around text-black fixed  top-0 right-0 pr-20 m-2 z-50 '>
+          <nav className=' sm:flex h-10 justify-around text-black fixed  top-0 right-0 pr-20 m-2 z-50 '>
             <div className='hidden sm:flex justify-center self-center font-sans'>
               <Link to="/" className='hover:bg-purple-600 rounded-md p-2'>Home</Link>
               <Link to="/projects" className='hover:bg-purple-600 rounded-md p-2'>Projects</Link>

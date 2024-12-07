@@ -4,7 +4,9 @@ function Home() {
     return (
         <div>
             {/* Hero Section */}
-            <section className="bg-blue-500 text-white text-center py-24" id="home">
+            <section className="bg-blue-500 text-white text-center py-24" id="home"
+            
+            >
                 <h1 className="text-3xl sm:text-4xl font-bold">Welcome to My Website</h1>
                 <p className="text-lg mt-4 sm:text-xl">Your gateway to innovation and creativity</p>
                 <a href="#services" className="inline-block mt-6 bg-orange-500 text-white px-6 py-3 text-lg font-semibold rounded-lg shadow-lg hover:bg-orange-600">
