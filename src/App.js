@@ -5,23 +5,19 @@ import Contact from './components/Contact/Contact';
 import Projects from './components/Projects/Projects';
 import Layout from './Layout';
 import About from './components/About/about';
+
 function App() {
-  
   return (
-    <Router>
+    <Router basename="/reactProject1">
       <Routes>
-       
-        <Route path='/reactProject1' element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='contact' element={<Contact />} />
-          <Route path='about' element={<About />} />
-          <Route path='projects' element={<Projects />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
+          <Route path="projects" element={<Projects />} />
         </Route>
       </Routes>
     </Router>
-
-   
-  
   );
 }
 
