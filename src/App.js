@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Routes>
        
-        <Route path='/' element={<Layout />}>
+        <Route path='/reactProject1' element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='contact' element={<Contact />} />
           <Route path='about' element={<About />} />
